@@ -1,11 +1,11 @@
 (function ($) {
 
-    function Rectangle(x, y, width, height) {
+    function Rectangle(x, y, width, height, margin) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.margin = 4;
+        this.margin = margin;
     }
 
     Rectangle.prototype.style = function () {
@@ -26,7 +26,7 @@
         this.$div = $div;
 
         $div.css('position', 'relative');
-        this.rectangle = new Rectangle(0, 0, $div.width(), $div.height());
+        this.rectangle = new Rectangle(0, 0, $div.width(), $div.height(), 0);
 
         this.nodeClass = function () {
             return '';
@@ -43,6 +43,7 @@
         };
         this.ready = function () {
         };
+        this.itemMargin = 0;
         this.smallestFontSize = 15;
         this.startingFontSize = 24;
         this.centerLabelVertically = true;
@@ -173,11 +174,11 @@
         }
 
         if (orientation == TreeMap.HORIZONTAL) {
-            this.divideDisplayArea(halves.left, new Rectangle(destRectangle.x, destRectangle.y, midPoint, destRectangle.height));
-            this.divideDisplayArea(halves.right, new Rectangle(destRectangle.x + midPoint, destRectangle.y, destRectangle.width - midPoint, destRectangle.height));
+            this.divideDisplayArea(halves.left, new Rectangle(destRectangle.x, destRectangle.y, midPoint, destRectangle.height, this.itemMargin));
+            this.divideDisplayArea(halves.right, new Rectangle(destRectangle.x + midPoint, destRectangle.y, destRectangle.width - midPoint, destRectangle.height, this.itemMargin));
         } else {
-            this.divideDisplayArea(halves.left, new Rectangle(destRectangle.x, destRectangle.y, destRectangle.width, midPoint));
-            this.divideDisplayArea(halves.right, new Rectangle(destRectangle.x, destRectangle.y + midPoint, destRectangle.width, destRectangle.height - midPoint));
+            this.divideDisplayArea(halves.left, new Rectangle(destRectangle.x, destRectangle.y, destRectangle.width, midPoint, this.itemMargin));
+            this.divideDisplayArea(halves.right, new Rectangle(destRectangle.x, destRectangle.y + midPoint, destRectangle.width, destRectangle.height - midPoint, this.itemMargin));
         }
     };
 
