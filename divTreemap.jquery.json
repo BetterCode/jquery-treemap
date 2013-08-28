@@ -1,5 +1,5 @@
 {
-    "name": "divtreemap",
+    "name": "divTreemap",
     "title": "jQuery Div Treemap",
     "description": "A simple jQuery plugin to create a tree map view of json data based on div for easy customization.",
     "keywords": [
@@ -7,7 +7,7 @@
         "datavizualization",
         "squarified"
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "Lucas Rosa Galego",
         "url": "https://github.com/lrgalego"
