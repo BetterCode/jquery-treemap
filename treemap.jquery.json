@@ -1,10 +1,11 @@
 {
     "name": "treemap",
-    "title": "jQuery Treemap",
-    "description": "A simple jQuery plugin to create a tree map view of json data.",
+    "title": "jQuery Div Treemap",
+    "description": "A simple jQuery plugin to create a tree map view of json data based on div for easy customization.",
     "keywords": [
         "treemap",
-        "datavizualization"
+        "datavizualization",
+        "squarified"
     ],
     "version": "1.0.1",
     "author": {
