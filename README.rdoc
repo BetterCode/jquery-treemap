@@ -46,7 +46,8 @@ You can pass a second parameter containing some options to customize the looking
             },
             smallestFontSize: 15, // If your label doesn't fit below this text size, it isn't added
             startingFontSize: 24, // Labels start this size (in px) and may be smaller to accommodate text
-            centerLabelVertically: true // Determine whether the labels should be centered vertically within the box
+            centerLabelVertically: true, // Determine whether the labels should be centered vertically within the box
+            itemMargin: 2 // Determine the space between the itens in the treemap by pixels
         }
     );
 
