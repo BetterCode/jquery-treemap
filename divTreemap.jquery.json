@@ -7,9 +7,10 @@
         "datavizualization",
         "squarified"
     ],
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": {
         "name": "Lucas Rosa Galego",
+        "email": "lrgalego@gmail.com",
         "url": "https://github.com/lrgalego"
     },
     "maintainers": [
