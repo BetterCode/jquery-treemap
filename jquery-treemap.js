@@ -188,8 +188,9 @@
         var length = nodeList.length;
 
         for (var midPoint = 0; midPoint < length; midPoint++) {
-            if (midPoint > 0 && (accValue + nodeList[midPoint].value > halfValue))
+            if (midPoint > 0 && (accValue + nodeList[midPoint].value > halfValue)){
                 break;
+            }
             accValue += nodeList[midPoint].value;
         }
 
