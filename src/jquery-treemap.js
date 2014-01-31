@@ -152,31 +152,16 @@
 
         var halves = this.splitFairly(nodeList);
 
-        var midPoint;
-        var orientation;
-
         var leftSum = this.sumValues(halves.left),
             rightSum = this.sumValues(halves.right),
             totalSum = leftSum + rightSum;
 
-        if (leftSum + rightSum <= 0) {
-            midPoint = 0;
-            orientation = TreeMap.HORIZONTAL;
-        } else {
-
-            if (destRectangle.isWide()) {
-                orientation = TreeMap.HORIZONTAL;
-                midPoint = Math.round((leftSum * destRectangle.width) / totalSum);
-            } else {
-                orientation = TreeMap.VERTICAL;
-                midPoint = Math.round((leftSum * destRectangle.height) / totalSum);
-            }
-        }
-
-        if (orientation == TreeMap.HORIZONTAL) {
+        if (destRectangle.isWide()) {
+            var midPoint = Math.round((leftSum * destRectangle.width) / totalSum);
             this.divideDisplayArea(halves.left, new Rectangle(destRectangle.x, destRectangle.y, midPoint, destRectangle.height, this.itemMargin));
             this.divideDisplayArea(halves.right, new Rectangle(destRectangle.x + midPoint, destRectangle.y, destRectangle.width - midPoint, destRectangle.height, this.itemMargin));
         } else {
+            var midPoint = Math.round((leftSum * destRectangle.height) / totalSum);
             this.divideDisplayArea(halves.left, new Rectangle(destRectangle.x, destRectangle.y, destRectangle.width, midPoint, this.itemMargin));
             this.divideDisplayArea(halves.right, new Rectangle(destRectangle.x, destRectangle.y + midPoint, destRectangle.width, destRectangle.height - midPoint, this.itemMargin));
         }
