@@ -1,0 +1,25 @@
+{
+  "name": "jquery-treemap",
+  "version": "0.0.1",
+  "description": "== JQuery Tree Map A simple jQuery plugin to create a tree map view of json data.",
+  "main": "jquery-treemap.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lrgalego/jquery-treemap.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/lrgalego/jquery-treemap/issues"
+  },
+  "homepage": "https://github.com/lrgalego/jquery-treemap",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.3.2"
+  }
+}
